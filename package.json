@@ -1,4 +1,4 @@
-{
+{"homepage": "https://github.com/blackeagle94/unilive-frontend",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -18,6 +18,7 @@
     "@testing-library/user-event": "^12.8.1",
     "axios": "^0.21.1",
     "chokidar": "^3.5.1",
+    "gh-pages": "^3.1.0",
     "http-proxy-middleware": "^0.19.1",
     "json-server": "^0.16.3",
     "pascal-case": "^3.1.2",
