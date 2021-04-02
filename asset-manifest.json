@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/blackeagle94/unilive-frontend/static/css/main.b959ab7f.chunk.css",
+    "main.js": "/blackeagle94/unilive-frontend/static/js/main.16396454.chunk.js",
+    "main.js.map": "/blackeagle94/unilive-frontend/static/js/main.16396454.chunk.js.map",
+    "runtime-main.js": "/blackeagle94/unilive-frontend/static/js/runtime-main.14c2d9f7.js",
+    "runtime-main.js.map": "/blackeagle94/unilive-frontend/static/js/runtime-main.14c2d9f7.js.map",
+    "static/js/2.bd19c862.chunk.js": "/blackeagle94/unilive-frontend/static/js/2.bd19c862.chunk.js",
+    "static/js/2.bd19c862.chunk.js.map": "/blackeagle94/unilive-frontend/static/js/2.bd19c862.chunk.js.map",
+    "index.html": "/blackeagle94/unilive-frontend/index.html",
+    "static/css/main.b959ab7f.chunk.css.map": "/blackeagle94/unilive-frontend/static/css/main.b959ab7f.chunk.css.map",
+    "static/js/2.bd19c862.chunk.js.LICENSE.txt": "/blackeagle94/unilive-frontend/static/js/2.bd19c862.chunk.js.LICENSE.txt",
+    "static/media/bills.afd626cb.png": "/blackeagle94/unilive-frontend/static/media/bills.afd626cb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14c2d9f7.js",
+    "static/js/2.bd19c862.chunk.js",
+    "static/css/main.b959ab7f.chunk.css",
+    "static/js/main.16396454.chunk.js"
+  ]
+}
