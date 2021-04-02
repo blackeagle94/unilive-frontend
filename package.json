@@ -41,7 +41,9 @@
     "json:server": "json-server -p 5000 --watch db.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
