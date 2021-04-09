@@ -29,15 +29,27 @@ const Footer = () => {
 			<div className="keepintouch-sm">
 				<div id="keepintouch">
 					<h1 className="footer-title">Keep In Touch</h1>
-					<form id="form-keepintouch" onSubmit={keepInTouch}>
-						<input
-							id="input-keepintouch"
-							type="email"
-							placeholder={placeHolder}
-							onChange={handleEmail}
-							value={email}
-						/>
-					</form>
+					{placeHolder === 'Enter your email address...' ? (
+						<form id="form-keepintouch" onSubmit={keepInTouch}>
+							<input
+								id="input-keepintouch"
+								type="email"
+								placeholder={placeHolder}
+								onChange={handleEmail}
+								value={email}
+							/>
+						</form>
+					) : (
+						<form id="form-keepintouch" onSubmit={keepInTouch}>
+							<input
+								id="input-keepintouch-saved"
+								type="email"
+								placeholder={placeHolder}
+								onChange={handleEmail}
+								value={email}
+							/>
+						</form>
+					)}
 				</div>
 				<div id="social-media">
 					<h1 className="footer-title">Let's Socialize</h1>
@@ -47,27 +59,21 @@ const Footer = () => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineFacebook
-								size={30}
-								style={{ fill: 'white', marginRight: 20 }}
-							/>
+							<AiOutlineFacebook className="footer-sm-icon" />
 						</a>
 						<a
 							href="https://www.instagram.com/"
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineInstagram
-								size={30}
-								style={{ fill: 'white', marginRight: 20 }}
-							/>
+							<AiOutlineInstagram className="footer-sm-icon" />
 						</a>
 						<a
 							href="https://twitter.com/home"
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiFillTwitterCircle size={30} style={{ fill: 'white' }} />
+							<AiFillTwitterCircle className="footer-sm-icon" />
 						</a>
 					</div>
 				</div>

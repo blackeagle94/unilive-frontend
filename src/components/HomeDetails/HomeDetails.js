@@ -29,13 +29,10 @@ export default function HomeDetails({
 	const [bookViewing, setBookViewing] = useState(false);
 	const { id } = useParams();
 	const [home, setHome] = useState([]);
-	const [firstImg, setFirstImg] = useState(
-		home.length !== 0 &&
-			`https://unilive-backend.herokuapp.com/${home.images[imageIndex].filePath}`,
-	);
-	const [secondImg, setSecondImg] = useState(null);
-	const [thirdImg, setThirdImg] = useState(null);
-	const [fourthImg, setFourthImg] = useState(null);
+	// const [firstImg, setFirstImg] = useState(
+	// 	home.length !== 0 &&
+	// 		`https://unilive-backend.herokuapp.com/${home.images[imageIndex].filePath}`,
+	// );
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [rowsOfBedroomPrices, setRowsOfBedroomPrices] = useState([]);
 
@@ -117,32 +114,28 @@ export default function HomeDetails({
 					},
 				}}
 			>
-				{/* <button onClick={()=>setModalIsOpen(false)}>X</button> */}
 				<img
-					src={
-						home.length !== 0 &&
-						`https://unilive-backend.herokuapp.com/${home.images[imageIndex].filePath}`
-					}
+					src={home.length !== 0 && home.images[imageIndex]}
 					style={{
 						borderRadius: '3px',
-						height: '99%',
-						width: 'auto',
-						marginLeft: '17%',
+						height: '100%',
+						width: '100%',
 					}}
 					alt=""
 				/>
+
 				<BiRightArrow
 					className="arrow-right"
 					onClick={handleRightSwipe}
 					fill="#03c5f0"
 				/>
+
 				<BiLeftArrow
 					className="arrow-left"
 					onClick={handleLeftSwipe}
 					fill="#03c5f0"
 				/>
 			</Modal>
-
 			<div className="homedetails-back-to-search">
 				<form>
 					<button
@@ -175,10 +168,7 @@ export default function HomeDetails({
 
 							<img
 								onDoubleClick={() => setModalIsOpen(true)}
-								src={
-									home.length !== 0 &&
-									`https://unilive-backend.herokuapp.com/${home.images[imageIndex].filePath}`
-								}
+								src={home.length !== 0 && home.images[imageIndex]}
 								style={{ borderRadius: '3px' }}
 								alt=""
 							/>
@@ -192,10 +182,7 @@ export default function HomeDetails({
 									index !== 0 ? (
 										<img
 											onClick={() => changeImage(index)}
-											src={
-												home.length !== 0 &&
-												`https://unilive-backend.herokuapp.com/${home.images[index].filePath}`
-											}
+											src={home.length !== 0 && image}
 											alt=""
 											style={{
 												height: 'auto',
@@ -363,7 +350,10 @@ export default function HomeDetails({
 					</div>
 				</div>
 
-				{bookViewing ? (
+				<Modal
+					isOpen={bookViewing}
+					onRequestClose={() => setModalIsOpen(false)}
+				>
 					<div className="book-viewing-container">
 						<button
 							className="btn-book-viewing-page-close"
@@ -439,8 +429,8 @@ export default function HomeDetails({
 								</form>
 							</div>
 						</div>
-					</div>
-				) : null}
+					</div>{' '}
+				</Modal>
 			</div>
 		</div>
 	);
