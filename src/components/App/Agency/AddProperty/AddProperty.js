@@ -211,7 +211,7 @@ const AddProperty = ({userInfo}) => {
 							<option value="" disabled selected required>
 								Select Property Type
 							</option>
-							<option value="Home">Home</option>
+							<option value="House">House</option>
 							<option value="Apartment">Apartment</option>
 						</select>
 					</div>
