@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App/App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 
 
 ReactDOM.render(
@@ -11,6 +12,6 @@ ReactDOM.render(
 	document.getElementById('root'),
 );
 
-serviceWorker.register()
+serviceWorkerRegistration.register();
 
 
